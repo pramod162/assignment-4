@@ -1,0 +1,65 @@
+ Write a Python program to count the number of characters (character frequency) in a string
+
+test_str= "gitamuniversity"
+all_freq= {}
+for i in test_str:
+    if i in all_freq:
+        all_freq[i] += 1
+    else:
+        all_freq[i] = 1
+print("count of all characters in string is ;\n:"+str(all_freq))
+
+#Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself.
+
+
+def v(str1):
+    c= str1[0]
+    str1= str1.replace(c,'$')
+    str1= c+str1[1:]
+    
+    return str1
+print(v('restart'))
+
+#Write a Python function that takes a list of words and returns the length of the longest one
+
+def long(list):
+    a= len(list[0])
+    print("len(list[0])",a)
+    b= len(list[1])
+    print("len(list[1])",b)
+    c= len(list[2])
+    print("len(list[2])",c)
+    if a>b:
+        if a>c:
+            return a
+    elif b>c:
+            return b
+    else:
+            return c
+
+
+#Write a Python program to get a single string from two given strings, separated by a space and swap the first two characters of each string Sample String : 'abc', 'xyz' Expected Result : 'xyc abz
+
+
+
+def swape(str1,str2):
+    new_a= str2[:2]+str1[2:]
+    new_b= str1[:2]+str2[2:]
+    
+    return new_a+ ' '+new_b
+print(swape("abc","xyz"))
+
+
+
+#Write a Python program to remove the nth index character from a nonempty string.
+
+
+
+
+def remove(string,n):
+    first= string[:n]
+    last= string[n+1:]
+    return first+last
+string= str("enter the string:")
+n= int(input("enter the index of charactyer to remove"))
+print("modefied string",remove(string,n))
